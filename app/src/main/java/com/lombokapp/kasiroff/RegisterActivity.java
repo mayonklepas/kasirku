@@ -69,7 +69,10 @@ public class RegisterActivity extends AppCompatActivity {
                         });
                         adb.show();
                     } catch (Exception ex) {
-                        ex.printStackTrace();
+                        AlertDialog.Builder adb=new AlertDialog.Builder(RegisterActivity.this);
+                        adb.setTitle("Informasi");
+                        adb.setMessage(ex.getMessage());
+                        adb.show();
                     } finally {
                         db.endTransaction();
                         db.close();

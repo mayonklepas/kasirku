@@ -403,7 +403,7 @@ public class LihatLaporanActivity extends AppCompatActivity {
                 TextView ltanggal = v.findViewById(R.id.ltanggal);
                 TextView lkode_trans = v.findViewById(R.id.lkode_trans);
                 TextView lnama = v.findViewById(R.id.lnama);
-                TextView ljumlah = v.findViewById(R.id.ljudul);
+                TextView ljumlah = v.findViewById(R.id.ljumlah);
                 TextView lharga = v.findViewById(R.id.lharga);
 
                 if(tipe.equals("stok")||tipe.equals("ranking")){

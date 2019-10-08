@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,38 +25,40 @@ public class Dblocalhelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE persediaan (kode_barang TEXT PRIMARY KEY,nama_barang TEXT," +
-                "satuan_barang TEXT,harga_beli REAL,harga_jual REAL,jumlah_barang REAL,diskon REAL,gambar_barang TEXT,tipe_barang integer,date_created TEXT)");
-        db.execSQL("CREATE TABLE racikan (kode_racik TEXT PRIMARY KEY,kode_barang_racik TEXT,kode_barang_isi TEXT,jumlah_isi REAL)");
-        db.execSQL("CREATE TABLE pembelian_master (kode_pembelian_master TEXT PRIMARY KEY,tanggal_pembelian TEXT,no_faktur TEXT,deskripsi TEXT,last_update TEXT,date_created TEXT)");
-        db.execSQL("CREATE TABLE pembelian_detail (kode_pembelian_detail TEXT PRIMARY KEY,kode_pembelian_master TEXT," +
-                "kode_barang TEXT,jumlah REAL,harga_beli REAL)");
-        db.execSQL("CREATE TABLE penjualan_master (kode_penjualan_master TEXT PRIMARY KEY,tanggal_penjualan TEXT,status integer,deskripsi TEXT,last_update TEXT,date_created TEXT)");
-        db.execSQL("CREATE TABLE penjualan_detail (kode_penjualan_detail TEXT PRIMARY KEY,kode_penjualan_master TEXT," +
-                "kode_barang TEXT,jumlah REAL,harga_jual REAL,diskon REAL)");
-        db.execSQL("CREATE TABLE catatan_master (kode_catatan_master TEXT PRIMARY KEY,tanggal_catatan TEXT,deskripsi TEXT,last_update TEXT,date_created TEXT)");
-        db.execSQL("CREATE TABLE catatan_detail (kode_catatan_detail TEXT PRIMARY KEY,kode_catatan_master TEXT," +
-                "tipe integer,deskripsi TEXT,jumlah REAL)");
+        try {
+            db.execSQL("CREATE TABLE persediaan (kode_barang TEXT PRIMARY KEY,nama_barang TEXT," +
+                    "satuan_barang TEXT,harga_beli REAL,harga_jual REAL,jumlah_barang REAL,diskon REAL,gambar_barang TEXT,tipe_barang integer,date_created TEXT)");
+            db.execSQL("CREATE TABLE racikan (kode_racik TEXT PRIMARY KEY,kode_barang_racik TEXT,kode_barang_isi TEXT,jumlah_isi REAL)");
+            db.execSQL("CREATE TABLE pembelian_master (kode_pembelian_master TEXT PRIMARY KEY,tanggal_pembelian TEXT,no_faktur TEXT,deskripsi TEXT,last_update TEXT,date_created TEXT)");
+            db.execSQL("CREATE TABLE pembelian_detail (kode_pembelian_detail TEXT PRIMARY KEY,kode_pembelian_master TEXT," +
+                    "kode_barang TEXT,jumlah REAL,harga_beli REAL)");
+            db.execSQL("CREATE TABLE penjualan_master (kode_penjualan_master TEXT PRIMARY KEY,tanggal_penjualan TEXT,status integer,deskripsi TEXT,last_update TEXT,date_created TEXT)");
+            db.execSQL("CREATE TABLE penjualan_detail (kode_penjualan_detail TEXT PRIMARY KEY,kode_penjualan_master TEXT," +
+                    "kode_barang TEXT,jumlah REAL,harga_jual REAL,diskon REAL)");
+            db.execSQL("CREATE TABLE catatan_master (kode_catatan_master TEXT PRIMARY KEY,tanggal_catatan TEXT,deskripsi TEXT,last_update TEXT,date_created TEXT)");
+            db.execSQL("CREATE TABLE catatan_detail (kode_catatan_detail TEXT PRIMARY KEY,kode_catatan_master TEXT," +
+                    "tipe integer,deskripsi TEXT,jumlah REAL)");
+            db.execSQL("CREATE TABLE perusahaan (id INTEGER PRIMARY KEY,nama_usaha TEXT,alamat_usaha TEXT," +
+                    "nohp_usaha TEXT,email_usaha TEXT,website TEXT,device_id TEXT,date_created TEXT)");
+            db.execSQL("CREATE TABLE pengguna (kode_user INTEGER PRIMARY KEY AUTOINCREMENT,email TEXT," +
+                    "username TEXT,password TEXT,read_persediaan INTEGER, write_persediaan INTEGER," +
+                    "read_pembelian INTEGER,write_pembelian INTEGER, " +
+                    "read_penjualan INTEGER,write_penjualan INTEGER," +
+                    "read_laporan INTEGER,read_user INTEGER)");
 
-        db.execSQL("CREATE TABLE perusahaan (id INTEGER PRIMARY KEY,nama_usaha TEXT,alamat_usaha TEXT," +
-                "nohp_usaha TEXT,email_usaha TEXT,website TEXT,device_id TEXT,date_created TEXT)");
-
-        db.execSQL("CREATE TABLE pengguna (kode_user INTEGER PRIMARY KEY AUTOINCREMENT,email TEXT," +
-                "username TEXT,password TEXT,read_persediaan INTEGER, write_persediaan INTEGER," +
-                "read_pembelian INTEGER,write_pembelian INTEGER, " +
-                "read_penjualan INTEGER,write_penjualan INTEGER," +
-                "read_laporan INTEGER,read_user INTEGER)");
-
-        db.execSQL("CREATE TABLE pengaturan(id INTEGER PRIMARY KEY,default_printer TEXT,host_sync TEXT," +
-                "sync_time REAL,issync INTEGER)");
-
-
-        db.execSQL("INSERT INTO perusahaan(id,nama_usaha,alamat_usaha,nohp_usaha,email_usaha,website,device_id)" +
-                "VALUES(1,'Hello World','World','123456789','helloworld@example.com','www.example.com','')");
+            db.execSQL("CREATE TABLE pengaturan(id INTEGER PRIMARY KEY,default_printer TEXT,host_sync TEXT," +
+                    "sync_time REAL,issync INTEGER)");
 
 
-        db.execSQL("INSERT INTO pengaturan(id,default_printer,host_sync,sync_time,issync)" +
-                "VALUES(1,'pos','kasirku.com',50,0)");
+            db.execSQL("INSERT INTO perusahaan(id,nama_usaha,alamat_usaha,nohp_usaha,email_usaha,website,device_id)" +
+                    "VALUES(1,'Hello World','World','123456789','helloworld@example.com','www.example.com','')");
+
+
+            db.execSQL("INSERT INTO pengaturan(id,default_printer,host_sync,sync_time,issync)" +
+                    "VALUES(1,'pos','kasirku.com',50,0)");
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
 
     }
 
