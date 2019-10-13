@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lombokapp.kasiroff">
+    package="com.lombokapp.redpos">
 
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -29,33 +29,33 @@
         android:roundIcon="@drawable/restoku"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name="com.lombokapp.redpos.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PersediaanActivity" />
-        <activity android:name=".PembelianActivity" />
-        <activity android:name=".PenjualanActivity" />
-        <activity android:name=".CatatanActivity" />
-        <activity android:name=".TambahPersediaanActivity" />
-        <activity android:name=".TambahPembelianActivity" />
-        <activity android:name=".CariBarangActivity" />
-        <activity android:name=".TambahPenjualanActivity" />
-        <activity android:name=".BarcodeActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".RacikActivity" />
-        <activity android:name=".PosBarcodeActivity" />
-        <activity android:name=".LaporanActivity" />
-        <activity android:name=".LihatLaporanActivity" />
-        <activity android:name=".PengaturanActivity" />
-        <activity android:name=".InfoUsahaActivity" />
-        <activity android:name=".PenggunaActivity" />
-        <activity android:name=".PrinterActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name="com.lombokapp.redpos.PersediaanActivity" />
+        <activity android:name="com.lombokapp.redpos.PembelianActivity" />
+        <activity android:name="com.lombokapp.redpos.PenjualanActivity" />
+        <activity android:name="com.lombokapp.redpos.CatatanActivity" />
+        <activity android:name="com.lombokapp.redpos.TambahPersediaanActivity" />
+        <activity android:name="com.lombokapp.redpos.TambahPembelianActivity" />
+        <activity android:name="com.lombokapp.redpos.CariBarangActivity" />
+        <activity android:name="com.lombokapp.redpos.TambahPenjualanActivity" />
+        <activity android:name="com.lombokapp.redpos.BarcodeActivity" />
+        <activity android:name="com.lombokapp.redpos.CameraActivity" />
+        <activity android:name="com.lombokapp.redpos.RacikActivity" />
+        <activity android:name="com.lombokapp.redpos.PosBarcodeActivity" />
+        <activity android:name="com.lombokapp.redpos.LaporanActivity" />
+        <activity android:name="com.lombokapp.redpos.LihatLaporanActivity" />
+        <activity android:name="com.lombokapp.redpos.PengaturanActivity" />
+        <activity android:name="com.lombokapp.redpos.InfoUsahaActivity" />
+        <activity android:name="com.lombokapp.redpos.PenggunaActivity" />
+        <activity android:name="com.lombokapp.redpos.PrinterActivity" />
+        <activity android:name="com.lombokapp.redpos.MainActivity" />
+        <activity android:name="com.lombokapp.redpos.RegisterActivity"></activity>
     </application>
 
 </manifest>

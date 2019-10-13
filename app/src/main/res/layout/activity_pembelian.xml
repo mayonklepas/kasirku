@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fdfdfd"
-    tools:context="com.lombokapp.kasiroff.PembelianActivity">
+    tools:context="com.lombokapp.redpos.PembelianActivity">
 
 
     <android.support.design.widget.FloatingActionButton
