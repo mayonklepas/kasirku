@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KasirKu Offline</string>
+    <string name="app_name">DFPOS Offline</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

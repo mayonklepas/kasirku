@@ -5,7 +5,7 @@
     android:id="@+id/cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lombokapp.redpos.TambahPenjualanActivity"
+    tools:context="com.dfit.dfpos.TambahPenjualanActivity"
     android:background="#ffffff">
 
     <android.support.v7.widget.Toolbar
@@ -126,7 +126,7 @@
         android:id="@+id/edkodebarang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/roundededtext"
@@ -141,18 +141,30 @@
 
     <ImageView
         android:id="@+id/bimg_barcode"
+        style="@style/DefaultButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/bcalc"
+        app:layout_constraintTop_toBottomOf="@+id/eddesk"
+        app:srcCompat="@drawable/ic_reorder_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/bcalc"
+        style="@style/DefaultButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:padding="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edkodebarang"
         app:layout_constraintTop_toBottomOf="@+id/eddesk"
-        app:srcCompat="@drawable/ic_reorder_black_24dp"
-        tools:ignore="VectorDrawableCompat"
-        style="@style/DefaultButton"/>
+        app:srcCompat="@drawable/ic_local_atm_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
 
     <TextView
         android:id="@+id/textView14"

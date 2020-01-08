@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context="com.lombokapp.redpos.LihatLaporanActivity">
+    tools:context="com.dfit.dfpos.LihatLaporanActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

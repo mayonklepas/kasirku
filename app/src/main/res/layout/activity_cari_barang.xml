@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fdfdfd"
-    tools:context="com.lombokapp.redpos.CariBarangActivity">
+    tools:context="com.dfit.dfpos.CariBarangActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

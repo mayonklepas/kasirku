@@ -5,7 +5,7 @@
     android:id="@+id/fadd"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lombokapp.redpos.CatatanActivity">
+    tools:context="com.dfit.dfpos.CatatanActivity">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"

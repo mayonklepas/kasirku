@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lombokapp.redpos.TambahPersediaanActivity"
+    tools:context="com.dfit.dfpos.TambahPersediaanActivity"
     android:background="#ffffff"
     >
 
@@ -151,14 +151,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
-
             <TextView
                 android:id="@+id/textdiskon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Diskon  %"
+                android:text="Diskon  (Nominal)"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edharga_jual" />
 
@@ -274,16 +273,31 @@
                 android:layout_height="40dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:padding="3dp"
+                android:text="Simpan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bcalc"
+                app:layout_constraintTop_toBottomOf="@+id/img_barang"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/bcalc"
+                style="@style/DefaultButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="24dp"
                 android:padding="3dp"
                 android:text="Simpan"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/bsimpan"
                 app:layout_constraintTop_toBottomOf="@+id/img_barang"
                 app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                app:srcCompat="@drawable/ic_local_atm_black_24dp"
                 tools:ignore="VectorDrawableCompat" />
 
             <Button
@@ -291,7 +305,7 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
+                android:layout_marginEnd="4dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/colorPrimary"

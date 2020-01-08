@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cardview_light_background"
     android:orientation="vertical"
-    tools:context="com.lombokapp.redpos.MainActivity">
+    tools:context="com.dfit.dfpos.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,29 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mainbg" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="KasirKu"
-        android:textColor="#ffffff"
-        android:textSize="27dp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logodf" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="App Semudah Kalkulator"
-        android:textColor="#ffffff"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <android.support.v7.widget.GridLayout
         android:layout_width="wrap_content"
@@ -382,13 +369,13 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
         app:srcCompat="@drawable/ic_account_circle_black_24dp"
-        tools:ignore="VectorDrawableCompat"
-        />
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/lnama_pengguna"
@@ -404,6 +391,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="DFPOS"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/banner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="Berkah Online Store"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/banner"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
 </android.support.constraint.ConstraintLayout>
